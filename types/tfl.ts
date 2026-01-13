@@ -11,6 +11,9 @@ export interface Journey {
     totalCost: number;
   };
   legs: {
+    mode: any;
+    arrivalPoint: any;
+    departurePoint: any;
     duration: number;
     departureTime: string;
     instruction: {
