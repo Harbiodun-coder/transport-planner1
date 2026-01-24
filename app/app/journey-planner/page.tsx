@@ -87,7 +87,7 @@ export default function JourneyPlannerPage() {
         </p>
 
         {/* Search Bar */}
-        <div className="mt-10 w-full max-w-4xl bg-white border rounded-xl shadow-sm p-3 flex flex-col md:flex-row gap-3">
+        <div className="mt-50 w-full max-w-4xl bg-white border rounded-xl shadow-sm p-3 flex flex-col md:flex-row gap-3">
           <LocationInput
             label="From: Enter location or stop"
             onSelect={setFrom}
