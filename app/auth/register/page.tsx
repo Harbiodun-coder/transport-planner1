@@ -16,6 +16,16 @@ export default function RegisterPage() {
       return;
     }
 
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{8,}$/;
+
+    if (!passwordRegex.test(password)) {
+      alert(
+        "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.",
+      );
+      return;
+    }
+
     const users = JSON.parse(localStorage.getItem("users") || "[]");
 
     const exists = users.find((u: any) => u.email === email);

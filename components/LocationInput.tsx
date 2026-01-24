@@ -25,20 +25,20 @@ export default function LocationInput({
   };
 
   return (
-    <div className="relative">
+    <div className="relative flex-1">
       <input
         value={value}
         onChange={handleChange}
         placeholder={label}
-        className="w-full border p-3 text-lg"
+        className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
 
       {results.length > 0 && (
-        <ul className="absolute bg-white border w-full z-10">
+        <ul className="absolute mt-1 bg-white border rounded-lg w-full z-20 shadow">
           {results.map((r) => (
             <li
               key={r.id}
-              className="p-2 hover:bg-gray-100 cursor-pointer"
+              className="px-4 py-2 text-sm hover:bg-slate-100 cursor-pointer"
               onClick={() => {
                 onSelect(r);
                 setValue(r.name);
